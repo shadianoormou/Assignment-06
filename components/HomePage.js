@@ -43,7 +43,7 @@ export default function HomePage() {
       <Hero />
       <main className="library-section" id="library">
         <div className="section-heading">
-          <div><p className="eyebrow">THE WORKOUT INDEX / 12 MOVES</p><h2>THE LIBRARY</h2><p>Twelve lifts covering every major muscle group.</p></div>
+          <div><p className="eyebrow">THE WORKOUT INDEX / 12 MOVES</p><h2>THE LIBRARY</h2><p>Twelve lifts covering every major muscle group.</p><p className="results-count" aria-live="polite">{loading ? 'Loading the library…' : `${visibleWorkouts.length} workout${visibleWorkouts.length === 1 ? '' : 's'} ready`}</p></div>
           <div className="library-tools">
             <label className="search-field"><Search size={15} aria-hidden="true" /><input aria-label="Search workouts" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search library" /></label>
             <label className="sort-field"><ArrowDownUp size={14} aria-hidden="true" /><span>Sort by</span><select aria-label="Sort workouts by" value={sort} onChange={(event) => setSort(event.target.value)}><option value="duration">Duration</option><option value="calories">Calories</option><option value="rating">Rating</option></select></label>
