@@ -13,7 +13,7 @@ export default function MyPlanPage() {
   const { plan, saved, hydrated, markDone, removeFromPlan, removeSaved } = useWorkouts();
   const { showToast } = useToast();
   const currentList = activeTab === 'plan' ? plan : saved;
-  const totals = plan.reduce((summary, workout) => ({ exercises: summary.exercises + 1, minutes: summary.minutes + workout.duration, calories: summary.calories + workout.caloriesBurned }), { exercises: 0, minutes: 0, calories: 0 });
+  const totals = currentList.reduce((summary, workout) => ({ exercises: summary.exercises + 1, minutes: summary.minutes + workout.duration, calories: summary.calories + workout.caloriesBurned }), { exercises: 0, minutes: 0, calories: 0 });
 
   function handleDone(id) { markDone(id); showToast('Workout marked as done'); }
   function handleRemove(id) { if (activeTab === 'plan') removeFromPlan(id); else removeSaved(id); showToast(activeTab === 'plan' ? "Removed from today's plan" : 'Removed from saved list'); }
