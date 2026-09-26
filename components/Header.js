@@ -31,7 +31,7 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-brand"><span className="brand-mark"><Dumbbell size={17} /></span> FITLOG</div>
-      <p>© 2026 FitLog — Workout Library. Train hard, log honest.</p>
+      <p className="text-ink/60">© 2026 FitLog — Workout Library. Train hard, log honest.</p>
     </footer>
   );
 }

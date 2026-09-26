@@ -22,7 +22,7 @@ FitLog is a focused workout library and daily training planner built for people 
 - Next.js 14 with the App Router
 - React 18
 - JavaScript
-- Responsive CSS with a custom dark visual system
+- Tailwind CSS with a custom dark visual system
 - Lucide React icons
 - FitLog Workout API
 - Vercel deployment
