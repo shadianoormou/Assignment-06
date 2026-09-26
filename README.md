@@ -87,8 +87,8 @@ pnpm verify:routes https://fit-log-assignment-06-mu.vercel.app
 FitLog consumes the following public API endpoints:
 
 ```text
-All workouts:    https://api.abcz.workers.dev/api/fitlog
-Workout detail:  https://api.abcz.workers.dev/api/fitlog/:id
+All workouts:    https://api.api-store.workers.dev/api/fitlog
+Workout detail:  https://api.api-store.workers.dev/api/fitlog/:id
 ```
 
 The client shows a loading skeleton while data is requested, validates the response shape, times out slow requests and provides a retry action when the library cannot be loaded.
