@@ -56,7 +56,7 @@ export default function WorkoutDetailPage({ id }) {
               {[['Equipment', workout.equipment], ['Difficulty', workout.difficulty], ['Sets', workout.sets], ['Reps', workout.reps], ['Duration', `${workout.duration} min`], ['Calories', `${workout.caloriesBurned} kcal`], ['Rating', workout.rating]].map(([label, value]) => <div className="spec" key={label}><span>{label}</span><strong>{value}</strong></div>)}
             </div>
             <div className="instructions"><h2>Instructions</h2><ol>{workout.instructions.map((instruction, index) => <li key={instruction}><span>{String(index + 1).padStart(2, '0')}</span><p>{instruction}</p></li>)}</ol></div>
-            <div className="detail-actions"><button className="button button-primary" onClick={handlePlan} disabled={alreadyPlanned}><Plus size={17} /> {alreadyPlanned ? "In today's plan" : planFull ? 'Plan is full' : "Add to today's plan"}</button><button className="button button-ghost" onClick={handleSave} disabled={alreadySaved}><Bookmark size={16} fill={alreadySaved ? 'currentColor' : 'none'} /> {alreadySaved ? 'Saved' : 'Save for later'}</button></div>
+            <div className="detail-actions"><button className="button button-primary" onClick={handlePlan}><Plus size={17} /> {alreadyPlanned ? "In today's plan" : planFull ? 'Plan is full' : "Add to today's plan"}</button><button className="button button-ghost" onClick={handleSave}><Bookmark size={16} fill={alreadySaved ? 'currentColor' : 'none'} /> {alreadySaved ? 'Saved' : 'Save for later'}</button></div>
             {alreadyPlanned && <p className="action-note"><Check size={13} /> This lift is already on your plan.</p>}
           </div>
         </div>
