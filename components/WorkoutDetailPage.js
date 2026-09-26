@@ -30,7 +30,7 @@ export default function WorkoutDetailPage({ id }) {
 
   function handlePlan() {
     if (planFull) return showToast('Today\'s plan is capped at five lifts', 'error');
-    if (alreadyPlanned) return showToast('Already in today\'s plan');
+    if (alreadyPlanned) return showToast('This lift is already on your plan.');
     addToPlan(workout);
     showToast('Added to today\'s plan');
   }
