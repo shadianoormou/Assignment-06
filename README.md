@@ -12,10 +12,11 @@ FitLog is a focused workout library and daily training planner built for people 
 - Browse a responsive library of exercises covering major muscle groups.
 - Open dynamic detail pages with equipment, difficulty, sets, reps, stats and instructions.
 - Add exercises to a five-lift daily plan or save them for a future session.
-- Track total exercises, minutes and estimated calories for today’s plan.
+- Track exercises, minutes and estimated calories for the active Today's Plan or Saved tab.
 - Mark completed lifts, remove items, search the library and sort by duration, calories or rating.
 - Keep plan and saved items between sessions with browser localStorage.
 - Get clear loading states, retry feedback, toast notifications and a custom 404 page.
+- Keep the plan capped at five lifts and show duplicate-action feedback instead of adding the same lift twice.
 
 ## Technology
 
@@ -115,6 +116,8 @@ Before submitting a deployment, verify:
 3. `/my-plan` loads and preserves localStorage state.
 4. The layout works on mobile, tablet and desktop widths.
 5. The browser console is free of runtime errors.
+
+The production deployment currently used for this project is [FitLog on Vercel](https://fit-log-assignment-06-mu.vercel.app).
 
 ## Design direction
 
